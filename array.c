@@ -3494,7 +3494,7 @@ rb_ary_slice_bang(int argc, VALUE *argv, VALUE ary)
 	    pos += orig_len;
 	    if (pos < 0) return Qnil;
 	}
-	else if (orig_len < pos) return Qnil;
+	else if (orig_len <= pos) return Qnil;
 	if (orig_len < pos + len) {
 	    len = orig_len - pos;
 	}
